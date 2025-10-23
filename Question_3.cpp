@@ -10,7 +10,6 @@ struct Employee {
     float salary;
 };
 
-// Function to display all employee details
 void displayEmployees(Employee employees[], int n) {
     cout << "\nEmployee Details:\n";
     cout << left << setw(10) << "ID" << setw(20) << "Name" << setw(10) << "Salary\n";
@@ -22,7 +21,6 @@ void displayEmployees(Employee employees[], int n) {
     }
 }
 
-// Function to search for an employee by ID
 void searchEmployee(Employee employees[], int n, int id) {
     bool found = false;
     for (int i = 0; i < n; i++) {
@@ -40,11 +38,10 @@ void searchEmployee(Employee employees[], int n, int id) {
     }
 }
 
-// Function to increase salary of employees earning less than ₹30,000
 void increaseSalary(Employee employees[], int n) {
     for (int i = 0; i < n; i++) {
         if (employees[i].salary < 30000) {
-            employees[i].salary += employees[i].salary * 0.10;  // Increase by 10%
+            employees[i].salary += employees[i].salary * 0.10; 
         }
     }
     cout << "\nSalary of employees earning less than ₹30,000 has been increased by 10%.\n";
@@ -54,7 +51,7 @@ int main() {
     Employee employees[10];
     int choice, id;
 
-    // Input employee details
+    
     cout << "Enter details of 10 employees:\n";
     for (int i = 0; i < 10; i++) {
         cout << "\nEmployee " << i + 1 << ":\n";
@@ -68,7 +65,7 @@ int main() {
     }
 
     do {
-        // Display menu
+       
         cout << "\nMenu:\n";
         cout << "1. Display all employee details\n";
         cout << "2. Search for an employee by ID\n";
